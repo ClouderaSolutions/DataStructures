@@ -1,4 +1,4 @@
-package com.clouderasolutions.LinkedList;
+package com.clouderasolutions.linkedlist;
 
 import org.apache.log4j.Logger;
 
@@ -49,3 +49,4 @@ public class FindMiddleNode {
 	}
 
 }
+
