@@ -1,0 +1,15 @@
+2017-11-17 15:20:40 INFO  FindMiddleNode:39 - Adding nodes to list
+2017-11-17 15:20:40 INFO  FindMiddleNode:45 - Calling findMiddleNode method
+2017-11-17 15:20:40 DEBUG FindMiddleNode:29 - SlowPointer Value : 1
+2017-11-17 15:20:40 DEBUG FindMiddleNode:30 - fastPointer Value : 1
+2017-11-17 15:20:40 INFO  FindMiddleNode:48 - 2
+2017-11-17 15:22:25 INFO  FindMiddleNode:39 - Adding nodes to list
+2017-11-17 15:22:25 INFO  FindMiddleNode:45 - Calling findMiddleNode method
+2017-11-17 15:22:25 DEBUG FindMiddleNode:29 - SlowPointer Value : 1
+2017-11-17 15:22:25 DEBUG FindMiddleNode:30 - fastPointer Value : 1
+2017-11-17 15:22:25 INFO  FindMiddleNode:48 - 2
+2017-11-17 15:22:53 INFO  FindMiddleNode:39 - Adding nodes to list
+2017-11-17 15:22:53 INFO  FindMiddleNode:45 - Calling findMiddleNode method
+2017-11-17 15:22:53 DEBUG FindMiddleNode:29 - SlowPointer Value : 1
+2017-11-17 15:22:53 DEBUG FindMiddleNode:30 - fastPointer Value : 1
+2017-11-17 15:22:53 INFO  FindMiddleNode:48 - 2
