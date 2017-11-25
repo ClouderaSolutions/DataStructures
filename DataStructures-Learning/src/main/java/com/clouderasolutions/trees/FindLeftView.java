@@ -6,8 +6,8 @@ public class FindLeftView {
 	int maxLevel = 0;
 	boolean initial = true;
 
-	public String printLeftView() {
-		return leftViewUsingRecursion(root, 1, "");
+	public void printLeftView() {
+		 leftViewUsingRecursion(root, 1);
 	}
 
 	/*
@@ -18,17 +18,16 @@ public class FindLeftView {
 	 * Using Recursion
 	 */
 
-	private String leftViewUsingRecursion(Node node, int currentLevel, String leftView) {
+	private void leftViewUsingRecursion(Node node, int currentLevel) {
 		if (node == null)
-			return leftView;
+			return;
 		if (maxLevel < currentLevel) {
-			leftView = leftView + " " + node.data;
+			System.out.print(" " + node.data);
 			maxLevel = currentLevel;
 		}
 
-		leftViewUsingRecursion(node.left, currentLevel + 1,leftView);
-		leftViewUsingRecursion(node.right, currentLevel + 1, leftView);
-		return leftView;
+		leftViewUsingRecursion(node.left, currentLevel + 1);
+		leftViewUsingRecursion(node.right, currentLevel + 1);
 	}
 
 	public static void main(String[] args) {
@@ -39,7 +38,7 @@ public class FindLeftView {
 		tree.root.left.left = new Node(3);
 		tree.root.right.right = new Node(20);
 		tree.root.right.right.right = new Node(25);
-		System.out.println(tree.printLeftView());
+		tree.printLeftView();
 	}
 
 }
