@@ -1,22 +1,13 @@
 package com.clouderasolutions.trees;
 
-class Node {
-	int data;
-	Node left, right;
-
-	Node(int data) {
-		this.data = data;
-	}
-}
-
 public class FindLeftView {
 
-	Node root;
+	public Node root;
 	int maxLevel = 0;
 	boolean initial = true;
 
-	public void printLeftView() {
-		leftViewUsingRecursion(root, 1);
+	public String printLeftView() {
+		return leftViewUsingRecursion(root, 1, "");
 	}
 
 	/*
@@ -27,16 +18,17 @@ public class FindLeftView {
 	 * Using Recursion
 	 */
 
-	private void leftViewUsingRecursion(Node node, int currentLevel) {
+	private String leftViewUsingRecursion(Node node, int currentLevel, String leftView) {
 		if (node == null)
-			return;
+			return leftView;
 		if (maxLevel < currentLevel) {
-			System.out.print(" " + node.data);
+			leftView = leftView + " " + node.data;
 			maxLevel = currentLevel;
 		}
 
-		leftViewUsingRecursion(node.left, currentLevel + 1);
-		leftViewUsingRecursion(node.right, currentLevel + 1);
+		leftViewUsingRecursion(node.left, currentLevel + 1,leftView);
+		leftViewUsingRecursion(node.right, currentLevel + 1, leftView);
+		return leftView;
 	}
 
 	public static void main(String[] args) {
@@ -47,7 +39,7 @@ public class FindLeftView {
 		tree.root.left.left = new Node(3);
 		tree.root.right.right = new Node(20);
 		tree.root.right.right.right = new Node(25);
-		tree.printLeftView();
+		System.out.println(tree.printLeftView());
 	}
 
 }
